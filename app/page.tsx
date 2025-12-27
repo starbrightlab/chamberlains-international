@@ -1,65 +1,115 @@
-import Image from "next/image";
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Services from '@/components/Services';
+import ContactCTA from '@/components/ContactCTA';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <Header />
+      <Hero />
+      <Services />
+      
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-chamberlains-navy mb-6">
+                Why Choose Chamberlains & Preserve?
+              </h2>
+              <p className="text-lg text-slate-gray mb-6">
+                With over 40 years of combined experience in real estate and property management, 
+                we bring international expertise to the Central Florida market.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="text-preserve-green mr-3 mt-1">✓</div>
+                  <div>
+                    <h3 className="font-semibold text-chamberlains-navy mb-1">International Reach</h3>
+                    <p className="text-sm text-slate-gray">Serving clients from USA, UK, Europe, and beyond</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="text-preserve-green mr-3 mt-1">✓</div>
+                  <div>
+                    <h3 className="font-semibold text-chamberlains-navy mb-1">Full-Service Solutions</h3>
+                    <p className="text-sm text-slate-gray">From purchase to property management, we handle it all</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="text-preserve-green mr-3 mt-1">✓</div>
+                  <div>
+                    <h3 className="font-semibold text-chamberlains-navy mb-1">Local Expertise</h3>
+                    <p className="text-sm text-slate-gray">Deep knowledge of Champions Gate, Davenport, and Kissimmee</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="text-preserve-green mr-3 mt-1">✓</div>
+                  <div>
+                    <h3 className="font-semibold text-chamberlains-navy mb-1">Professional Standards</h3>
+                    <p className="text-sm text-slate-gray">NAR REALTOR® members committed to excellence</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-chamberlains-blue/10 p-6 rounded-lg text-center">
+                <div className="text-4xl font-bold text-chamberlains-blue mb-2">40+</div>
+                <div className="text-sm text-slate-gray">Years Experience</div>
+              </div>
+              <div className="bg-preserve-green/10 p-6 rounded-lg text-center">
+                <div className="text-4xl font-bold text-preserve-green mb-2">100s</div>
+                <div className="text-sm text-slate-gray">Properties Managed</div>
+              </div>
+              <div className="bg-warm-accent/10 p-6 rounded-lg text-center">
+                <div className="text-4xl font-bold text-warm-accent mb-2">3</div>
+                <div className="text-sm text-slate-gray">Service Areas</div>
+              </div>
+              <div className="bg-chamberlains-navy/10 p-6 rounded-lg text-center">
+                <div className="text-4xl font-bold text-chamberlains-navy mb-2">24/7</div>
+                <div className="text-sm text-slate-gray">Support Available</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-16 bg-light-gray">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-chamberlains-navy mb-4">Service Areas</h2>
+            <p className="text-lg text-slate-gray">
+              Proudly serving Central Florida's most desirable communities
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-chamberlains-navy mb-2">Champions Gate</h3>
+              <p className="text-sm text-slate-gray">
+                Our headquarters location, offering easy access to world-class golf and resort living.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-chamberlains-navy mb-2">Davenport</h3>
+              <p className="text-sm text-slate-gray">
+                Perfect for vacation rentals and investment properties near Disney World.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-chamberlains-navy mb-2">Kissimmee</h3>
+              <p className="text-sm text-slate-gray">
+                Growing market with excellent opportunities for both buyers and investors.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <ContactCTA />
+      <Footer />
+    </main>
   );
 }

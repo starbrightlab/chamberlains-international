@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chamberlains Real Estate & Preserve Property Management Website
 
-## Getting Started
+Modern, responsive website for Chamberlains Real Estate International and Preserve Property Management.
 
-First, run the development server:
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to see the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Fonts:** Inter (primary), Playfair Display (accents)
+- **Deployment:** Netlify (via Starbright Lab LLC)
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+website/
+├── app/
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Homepage
+│   └── globals.css         # Global styles & Tailwind config
+├── components/
+│   ├── Header.tsx          # Sticky navigation header
+│   ├── Hero.tsx            # Homepage hero section
+│   ├── Services.tsx        # Services grid
+│   ├── ContactCTA.tsx      # Contact call-to-action bar
+│   └── Footer.tsx          # Site footer
+└── public/
+    ├── logo.png            # Chamberlains logo
+    ├── ppm-logo.jpg        # Preserve logo
+    └── head.jpg            # Hero background image
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Brand Colors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```css
+--chamberlains-navy: #1e3a5f   /* Primary brand color */
+--chamberlains-blue: #2563eb   /* CTAs and links */
+--preserve-green: #10b981      /* Property management */
+--warm-accent: #f59e0b         /* Highlights */
+```
 
-## Deploy on Vercel
+## 📝 Content Areas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Homepage Sections
+1. **Header** - Sticky navigation with phone number
+2. **Hero** - Large image with dual CTAs
+3. **Services** - Three main service offerings
+4. **Why Choose Us** - Benefits and statistics
+5. **Service Areas** - Champions Gate, Davenport, Kissimmee
+6. **Contact CTA** - Call-to-action bar
+7. **Footer** - Links and contact information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Customization
+
+### Adding New Pages
+Create new routes in the `app/` directory:
+```typescript
+// app/about/page.tsx
+export default function About() {
+  return <div>About Us</div>;
+}
+```
+
+### Updating Content
+- **Text content:** Edit component files in `components/`
+- **Images:** Add to `public/` directory
+- **Metadata:** Update `app/layout.tsx`
+
+## 🌐 Deployment
+
+This site is deployed via Netlify under the Starbright Lab LLC account.
+
+### Build Command
+```bash
+npm run build
+```
+
+### Environment Variables
+None required for basic deployment.
+
+### Domain Configuration
+- Primary: chamberlainsinternational.com
+- Redirect: preservemanagement.com → chamberlainsinternational.com
+
+## 📱 Responsive Design
+
+The site is mobile-first and fully responsive:
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+
+## ♿ Accessibility
+
+- Semantic HTML elements
+- WCAG AA color contrast ratios
+- Keyboard navigation support
+- Screen reader friendly
+
+## 🔮 Future Enhancements
+
+- [ ] MLS property listings integration
+- [ ] Contact form with email delivery
+- [ ] Property search filters
+- [ ] Decap CMS for content management
+- [ ] Blog/news section
+- [ ] Testimonials section
+- [ ] Virtual tour embeds
+- [ ] Multi-language support (Spanish)
+
+## 📞 Contact
+
+**Starbright Lab LLC**  
+Website Development & Maintenance  
+Andrew Lawson
+
+---
+
+Built with ❤️ by Starbright Lab LLC
