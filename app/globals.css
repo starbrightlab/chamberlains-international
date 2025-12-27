@@ -3,36 +3,46 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1e293b;
+  --foreground: #0f172a;
   
-  /* Updated Brand Colors - Working with the logos */
-  --chamberlains-navy: #1a3a5e;
-  --chamberlains-blue: #2e5c8a;
-  --preserve-green: #4a7c59;
-  --preserve-gold: #c9a961;
-  --warm-accent: #d4a574;
+  /* Brand Colors - Extracted from logos */
+  --navy-primary: #1e3a5f;      /* Logo navy */
+  --navy-dark: #0f1f3d;         /* Deeper navy */
+  --blue-accent: #3b82f6;       /* Bright blue */
+  --gold-accent: #d4a574;       /* Palm gold from Preserve logo */
+  --green-accent: #10b981;      /* Fresh, natural */
   
-  /* Neutral Colors */
-  --slate-gray: #64748b;
-  --light-gray: #f8fafc;
-  --dark-gray: #0f172a;
+  /* Neutrals */
+  --slate: #64748b;
+  --slate-light: #f1f5f9;
+  --slate-dark: #334155;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  /* Custom Brand Colors */
-  --color-chamberlains-navy: var(--chamberlains-navy);
-  --color-chamberlains-blue: var(--chamberlains-blue);
-  --color-preserve-green: var(--preserve-green);
-  --color-preserve-gold: var(--preserve-gold);
-  --color-warm-accent: var(--warm-accent);
+  /* Brand Colors */
+  --color-navy-primary: var(--navy-primary);
+  --color-navy-dark: var(--navy-dark);
+  --color-blue-accent: var(--blue-accent);
+  --color-gold-accent: var(--gold-accent);
+  --color-green-accent: var(--green-accent);
   
-  /* Custom Neutrals */
-  --color-slate-gray: var(--slate-gray);
-  --color-light-gray: var(--light-gray);
-  --color-dark-gray: var(--dark-gray);
+  /* Neutrals */
+  --color-slate: var(--slate);
+  --color-slate-light: var(--slate-light);
+  --color-slate-dark: var(--slate-dark);
+  
+  /* Legacy color names for compatibility */
+  --color-chamberlains-navy: var(--navy-primary);
+  --color-chamberlains-blue: var(--blue-accent);
+  --color-preserve-green: var(--green-accent);
+  --color-preserve-gold: var(--gold-accent);
+  --color-warm-accent: var(--gold-accent);
+  --color-slate-gray: var(--slate);
+  --color-light-gray: var(--slate-light);
+  --color-dark-gray: var(--navy-dark);
   
   /* Fonts */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -47,12 +57,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom utilities */
 .font-display {
   font-family: var(--font-display);
 }

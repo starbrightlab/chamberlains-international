@@ -8,26 +8,28 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-chamberlains-navy to-chamberlains-blue text-white sticky top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 py-3">
+    <header className="bg-navy-primary text-white sticky top-0 z-50 shadow-xl border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Company Info */}
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
-            <div className="w-14 h-14 relative flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            {/* Logo - no background, just the logo itself */}
+            <div className="w-12 h-12 relative flex-shrink-0">
               <Image 
                 src="/logo.png" 
                 alt="Chamberlains Real Estate International" 
                 fill
                 className="object-contain"
-                sizes="56px"
+                sizes="48px"
                 priority
               />
             </div>
+            {/* Company info */}
             <div className="hidden lg:block">
               <div className="font-semibold text-base leading-tight">Chamberlains Real Estate International</div>
               <a 
                 href="tel:+14075697595" 
-                className="text-sm opacity-90 hover:opacity-100 transition-opacity"
+                className="text-sm text-gold-accent hover:text-white transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
                 +1 (407) 569-7595
@@ -37,7 +39,7 @@ export default function Header() {
               <div className="font-semibold text-sm leading-tight">Chamberlains Real Estate</div>
               <a 
                 href="tel:+14075697595" 
-                className="text-xs opacity-90 hover:opacity-100 transition-opacity"
+                className="text-xs text-gold-accent hover:text-white transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
                 (407) 569-7595
@@ -46,40 +48,40 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <nav className="hidden md:flex items-center gap-1">
             <Link 
               href="/" 
-              className="px-3 lg:px-4 py-2 hover:bg-white/10 rounded transition-colors text-sm lg:text-base"
+              className="px-4 py-2 hover:bg-white/10 rounded-lg transition-all text-sm font-medium"
             >
               Home
             </Link>
             <Link 
               href="/buy" 
-              className="px-3 lg:px-4 py-2 hover:bg-white/10 rounded transition-colors text-sm lg:text-base"
+              className="px-4 py-2 hover:bg-white/10 rounded-lg transition-all text-sm font-medium"
             >
               Buy
             </Link>
             <Link 
               href="/sell" 
-              className="px-3 lg:px-4 py-2 hover:bg-white/10 rounded transition-colors text-sm lg:text-base"
+              className="px-4 py-2 hover:bg-white/10 rounded-lg transition-all text-sm font-medium"
             >
               Sell
             </Link>
             <Link 
               href="/property-management" 
-              className="px-3 lg:px-4 py-2 hover:bg-white/10 rounded transition-colors text-sm lg:text-base whitespace-nowrap"
+              className="px-4 py-2 hover:bg-white/10 rounded-lg transition-all text-sm font-medium whitespace-nowrap"
             >
-              Property Management
+              Management
             </Link>
             <Link 
               href="/about" 
-              className="px-3 lg:px-4 py-2 hover:bg-white/10 rounded transition-colors text-sm lg:text-base"
+              className="px-4 py-2 hover:bg-white/10 rounded-lg transition-all text-sm font-medium"
             >
-              About Us
+              About
             </Link>
             <Link 
               href="/contact" 
-              className="ml-2 bg-preserve-gold hover:bg-warm-accent px-4 lg:px-6 py-2 rounded transition-colors text-sm lg:text-base font-semibold text-chamberlains-navy"
+              className="ml-2 bg-gold-accent hover:bg-gold-accent/90 text-navy-dark px-6 py-2 rounded-lg transition-all text-sm font-semibold shadow-lg hover:shadow-xl"
             >
               Contact
             </Link>
@@ -87,7 +89,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover:bg-white/10 rounded transition-colors"
+            className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -103,55 +105,55 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-white/20 pt-4">
-            <nav className="flex flex-col space-y-2">
+          <div className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4">
+            <nav className="flex flex-col gap-2">
               <Link 
                 href="/" 
-                className="px-4 py-2 hover:bg-white/10 rounded transition-colors"
+                className="px-4 py-3 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/buy" 
-                className="px-4 py-2 hover:bg-white/10 rounded transition-colors"
+                className="px-4 py-3 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Buy Property
               </Link>
               <Link 
                 href="/sell" 
-                className="px-4 py-2 hover:bg-white/10 rounded transition-colors"
+                className="px-4 py-3 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Sell Property
               </Link>
               <Link 
                 href="/property-management" 
-                className="px-4 py-2 hover:bg-white/10 rounded transition-colors"
+                className="px-4 py-3 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Property Management
               </Link>
               <Link 
                 href="/about" 
-                className="px-4 py-2 hover:bg-white/10 rounded transition-colors"
+                className="px-4 py-3 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link 
                 href="/contact" 
-                className="px-4 py-2 hover:bg-white/10 rounded transition-colors"
+                className="px-4 py-3 hover:bg-white/10 rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <a 
                 href="tel:+14075697595" 
-                className="px-4 py-2 bg-preserve-gold hover:bg-warm-accent text-chamberlains-navy rounded transition-colors font-semibold text-center"
+                className="mt-2 px-4 py-3 bg-gold-accent hover:bg-gold-accent/90 text-navy-dark rounded-lg transition-colors font-semibold text-center"
               >
-                📞 +1 (407) 569-7595
+                📞 Call (407) 569-7595
               </a>
             </nav>
           </div>

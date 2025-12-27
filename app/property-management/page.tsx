@@ -15,22 +15,39 @@ export default function PropertyManagement() {
       <Header />
       
       {/* Hero */}
-      <section className="relative h-96 flex items-center justify-center bg-gradient-to-br from-preserve-green via-chamberlains-blue to-chamberlains-navy">
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <div className="flex flex-col items-center mb-6">
-            <div className="w-32 h-32 relative mb-6">
+      <section className="relative min-h-[400px] flex items-center justify-center bg-white overflow-hidden">
+        {/* Colored accent bar at top */}
+        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-green-accent via-navy-primary to-navy-dark"></div>
+        
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-slate-light/30">
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, #1e3a5f 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+        
+        <div className="relative z-10 text-center px-4 py-12 max-w-4xl mx-auto">
+          {/* Logo - now stands out on white */}
+          <div className="flex justify-center mb-8">
+            <div className="w-40 h-40 relative">
               <Image 
                 src="/ppm-logo.png" 
                 alt="Preserve Property Management" 
                 fill 
-                className="object-contain drop-shadow-2xl" 
-                sizes="128px" 
+                className="object-contain" 
+                sizes="160px" 
                 priority 
               />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-3">Preserve Property Management</h1>
           </div>
-          <p className="text-xl md:text-2xl opacity-95">Professional care for your investment properties</p>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 leading-tight text-navy-dark">
+            Preserve Property Management
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-dark max-w-2xl mx-auto">
+            Professional care for your investment properties
+          </p>
         </div>
       </section>
 
@@ -38,7 +55,7 @@ export default function PropertyManagement() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-chamberlains-navy mb-4">Preserve Property Management</h2>
+            <h2 className="text-4xl font-bold text-chamberlains-navy mb-4">Our Services</h2>
             <p className="text-lg text-slate-gray max-w-3xl mx-auto">
               Established in 2003, Preserve Property Management specializes in professional leasing and 
               management of residential and investment properties. We offer both vacation rentals and 
@@ -50,9 +67,9 @@ export default function PropertyManagement() {
           <div className="bg-preserve-green/10 p-8 rounded-lg mb-12 text-center">
             <h3 className="text-2xl font-bold text-chamberlains-navy mb-3">No-Contract Philosophy</h3>
             <p className="text-lg text-slate-gray max-w-2xl mx-auto">
-              We don't believe in locking our clients into contracts. We're so confident in our services 
-              that if we don't deliver what we promise, you're free to move to another company without 
-              any penalty. But we know that won't happen.
+              We don&apos;t believe in locking our clients into contracts. We&apos;re so confident in our services 
+              that if we don&apos;t deliver what we promise, you&apos;re free to move to another company without 
+              any penalty. But we know that won&apos;t happen.
             </p>
           </div>
 
