@@ -133,7 +133,7 @@ export default function Contact() {
                       type="text" 
                       required 
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({...formData, name: e.target.value})}
                     />
                     <FormInput 
                       label="Email Address" 
@@ -141,7 +141,7 @@ export default function Contact() {
                       type="email" 
                       required 
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({...formData, email: e.target.value})}
                     />
                   </div>
 
@@ -151,7 +151,7 @@ export default function Contact() {
                       id="phone" 
                       type="tel" 
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({...formData, phone: e.target.value})}
                     />
                     <div className="flex flex-col gap-2">
                       <label htmlFor="subject" className="text-xs font-bold uppercase tracking-widest text-primary/60">Subject of Inquiry</label>
@@ -160,7 +160,7 @@ export default function Contact() {
                         name="subject"
                         required
                         value={formData.subject}
-                        onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFormData({...formData, subject: e.target.value})}
                         className="bg-transparent border-b-2 border-border py-3 focus:border-secondary outline-none transition-colors text-primary font-medium appearance-none cursor-pointer"
                       >
                         <option value="">Select a service...</option>
@@ -180,7 +180,7 @@ export default function Contact() {
                       required
                       rows={5}
                       value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setFormData({...formData, message: e.target.value})}
                       className="bg-transparent border-b-2 border-border py-3 focus:border-secondary outline-none transition-colors text-primary font-medium resize-none"
                     />
                   </div>
