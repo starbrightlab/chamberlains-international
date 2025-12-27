@@ -15,37 +15,25 @@ export default function PropertyManagement() {
       <Header />
       
       {/* Hero */}
-      <section className="relative min-h-[400px] flex items-center justify-center bg-white overflow-hidden">
-        {/* Colored accent bar at top */}
-        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-green-accent via-navy-primary to-navy-dark"></div>
-        
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 bg-slate-light/30">
-          <div className="absolute inset-0 opacity-[0.02]" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, #1e3a5f 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-        
-        <div className="relative z-10 text-center px-4 py-12 max-w-4xl mx-auto">
-          {/* Logo - now stands out on white */}
+      <section className="relative py-20 bg-gradient-to-br from-navy to-navy/90">
+        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <div className="flex justify-center mb-8">
-            <div className="w-40 h-40 relative">
+            <div className="w-32 h-32 relative">
               <Image 
                 src="/ppm-logo.png" 
                 alt="Preserve Property Management" 
                 fill 
                 className="object-contain" 
-                sizes="160px" 
+                sizes="128px" 
                 priority 
               />
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 leading-tight text-navy-dark">
+          <h1 className="text-5xl md:text-6xl font-bold font-display mb-4">
             Preserve Property Management
           </h1>
-          <p className="text-xl md:text-2xl text-slate-dark max-w-2xl mx-auto">
+          <p className="text-xl text-white/90">
             Professional care for your investment properties
           </p>
         </div>

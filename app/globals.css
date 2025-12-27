@@ -1,69 +1,40 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
   
-  /* Core Brand Colors - Based on Logo Analysis */
-  /* PRIMARY: White/Light - Let blue logos shine */
-  --cream-light: #fdfbf7;
-  --warm-white: #f8f6f2;
-  --soft-gray: #e8e6e1;
-  
-  /* ACCENT 1: Gold from Preserve palm */
-  --gold-primary: #c9a961;
-  --gold-dark: #a88a4d;
-  --gold-light: #e8d5a8;
-  
-  /* ACCENT 2: Deep green (nature, property) */
-  --green-primary: #4a7c59;
-  --green-dark: #3a6347;
-  
-  /* ACCENT 3: Navy for text (from logos) */
-  --navy-text: #1e3a5f;
-  --navy-dark: #0f1f3d;
-  
-  /* Neutrals */
+  /* Simple, clean palette */
+  --navy: #1e3a5f;
+  --gold: #c9a961;
+  --green: #10b981;
   --slate: #64748b;
-  --slate-light: #f1f5f9;
+  --light: #f8fafc;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  /* Light backgrounds - where logos live */
-  --color-cream-light: var(--cream-light);
-  --color-warm-white: var(--warm-white);
-  --color-soft-gray: var(--soft-gray);
-  
-  /* Gold accents - premium, warm */
-  --color-gold-primary: var(--gold-primary);
-  --color-gold-dark: var(--gold-dark);
-  --color-gold-light: var(--gold-light);
-  
-  /* Green accents - natural, property */
-  --color-green-primary: var(--green-primary);
-  --color-green-dark: var(--green-dark);
-  
-  /* Text colors */
-  --color-navy-text: var(--navy-text);
-  --color-navy-dark: var(--navy-dark);
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-green: var(--green);
   --color-slate: var(--slate);
-  --color-slate-light: var(--slate-light);
+  --color-light: var(--light);
   
-  /* Legacy compatibility */
-  --color-chamberlains-navy: var(--navy-text);
-  --color-preserve-green: var(--green-primary);
-  --color-preserve-gold: var(--gold-primary);
+  /* Legacy names */
+  --color-chamberlains-navy: var(--navy);
+  --color-chamberlains-blue: var(--navy);
+  --color-preserve-green: var(--green);
+  --color-preserve-gold: var(--gold);
+  --color-warm-accent: var(--gold);
   --color-slate-gray: var(--slate);
-  --color-light-gray: var(--slate-light);
-  --color-dark-gray: var(--navy-dark);
+  --color-light-gray: var(--light);
+  --color-dark-gray: var(--navy);
   
-  /* Fonts */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
 }
 
 body {
@@ -71,7 +42,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
