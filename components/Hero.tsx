@@ -34,7 +34,7 @@ export default function Hero() {
             International Expertise • Local Excellence
           </div>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-400 drop-shadow-lg">
+          <p className="text-xl md:text-2xl text-white mb-12 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-400 drop-shadow-lg">
             Boutique real estate services and premium property management 
             for the most discerning local and international clients.
           </p>
