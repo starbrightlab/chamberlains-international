@@ -75,12 +75,11 @@ export default function PropertyManagement() {
               title="Vacation Rentals"
               description="Maximizing revenue through professional marketing and meticulous guest relations for short-term resort stays."
               features={[
-                "Global marketing across major travel platforms",
+                "Global marketing set up support",
                 "Dynamic pricing and occupancy optimization",
-                "5-star guest screening and check-in services",
+                "5-star guest check-in services",
                 "Premium housekeeping and linen services",
-                "24/7 emergency owner & guest support",
-                "Detailed monthly financial performance reports"
+                "24/7 emergency owner & guest support"
               ]}
             />
 
@@ -88,14 +87,13 @@ export default function PropertyManagement() {
             <ManagementCard 
               type="longterm"
               title="Long-Term Leasing"
-              description="Protecting your long-term assets with rigorous tenant selection and proactive maintenance management."
+              description="Protecting your long-term assets with rigorous tenant selection and proactive maintenance management through Chamberlains Real Estate International."
               features={[
                 "Comprehensive nationwide tenant screening",
-                "Professional lease preparation and legal oversight",
-                "Automated rent collection and direct disbursements",
+                "Professional lease preparation",
+                "Rent collection and direct disbursements",
                 "Proactive property maintenance coordination",
-                "Bi-annual detailed property inspections",
-                "Complete legal compliance and documentation"
+                "Comprehensive compliance and documentation"
               ]}
             />
           </div>
@@ -109,12 +107,11 @@ export default function PropertyManagement() {
             <h3 className="text-3xl md:text-4xl font-display font-bold text-primary">Ancillary Services</h3>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <AncillaryItem title="Maintenance & Repairs" description="Vetted, licensed tradesmen for every property requirement." />
+            <AncillaryItem title="Maintenance & Repairs" description="Vetted tradesmen for every property requirement." />
             <AncillaryItem title="Pool & Landscape" description="Specialized care for your outdoor amenities and curb appeal." />
             <AncillaryItem title="Security Systems" description="Modern monitoring solutions for peace of mind." />
             <AncillaryItem title="Interior Design" description="Elevated furniture packages designed to increase rental yields." />
             <AncillaryItem title="Regular Inspections" description="Detailed digital reports with photographic documentation." />
-            <AncillaryItem title="Financial Services" description="Seamless tax document preparation and financial reporting." />
           </div>
         </div>
       </section>

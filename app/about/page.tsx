@@ -29,7 +29,7 @@ export default function About() {
             <div>
               <h2 className="text-secondary font-sans font-bold uppercase tracking-widest text-sm mb-4">The Firm</h2>
               <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-8 leading-tight">
-                Chamberlains Real Estate <br />International
+                Chamberlains Real Estate <br />International Inc.
               </h3>
               <div className="space-y-6 text-lg text-muted leading-relaxed">
                 <p>
@@ -76,7 +76,7 @@ export default function About() {
                 <p>
                   By applying extremely high standards to daily operations, we ensure that owners retain 
                   full control of their investment while we handle the complexities of resort-style 
-                  management in Polk and Osceola Counties.
+                  management in Polk, Lake and Osceola Counties.
                 </p>
               </div>
             </div>
@@ -91,10 +91,6 @@ export default function About() {
             <h3 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 text-center">Our Commitment</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <ValueCard 
-              title="REALTOR® Standards" 
-              description="Subscribing to a strict code of ethics and maintaining a higher level of knowledge."
-            />
             <ValueCard 
               title="Global Intelligence" 
               description="Providing specialized services informed by global market trends and statistics."

@@ -48,6 +48,8 @@ export default function Footer() {
               <FooterLink href="/buy">Buying Property</FooterLink>
               <FooterLink href="/sell">Selling Property</FooterLink>
               <FooterLink href="/property-management">Property Management</FooterLink>
+              <FooterLink href="/property-management">Vacation Rentals</FooterLink>
+              <FooterLink href="/property-management">Long-Term Leasing</FooterLink>
               <FooterLink href="/about">About Our Firm</FooterLink>
               <FooterLink href="/contact">Private Consultation</FooterLink>
             </ul>
@@ -68,24 +70,23 @@ export default function Footer() {
                 <a href="tel:+14075697595" className="text-white hover:text-secondary transition-colors inline-flex items-center gap-2">
                   <span className="text-xs">PH:</span> +1 (407) 569-7595
                 </a>
-                <a href="mailto:info@chamberlainsinternational.com" className="text-white/70 hover:text-white transition-colors text-[15px]">
-                  info@chamberlainsinternational.com
+                <a href="mailto:tdonaghue@tampabay.rr.com" className="text-white/70 hover:text-white transition-colors text-[15px]">
+                  tdonaghue@tampabay.rr.com
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Credentials */}
+          {/* Credentials
           <div>
             <h4 className="text-lg font-display font-bold mb-8 text-secondary">Affiliations</h4>
             <div className="grid grid-cols-2 gap-6 opacity-60">
-              {/* These would be small partner logos in a real app */}
               <div className="h-12 flex items-center justify-center border border-white/20 rounded-lg text-[10px] text-center p-2 uppercase tracking-widest">NAR® REALTOR®</div>
               <div className="h-12 flex items-center justify-center border border-white/20 rounded-lg text-[10px] text-center p-2 uppercase tracking-widest">MLS® Search</div>
               <div className="h-12 flex items-center justify-center border border-white/20 rounded-lg text-[10px] text-center p-2 uppercase tracking-widest">EHO</div>
               <div className="h-12 flex items-center justify-center border border-white/20 rounded-lg text-[10px] text-center p-2 uppercase tracking-widest">FAR Member</div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}

@@ -55,7 +55,7 @@ export default function BuyProperty() {
               <div className="grid gap-8 mt-12">
                 <ServiceHighlight 
                   title="Market Intelligence" 
-                  description="Detailed valuation and trend analysis to ensure you make an informed investment."
+                  description="Detailed comparative market analysis and trend analysis to ensure you make an informed investment. (CMA)"
                 />
                 <ServiceHighlight 
                   title="Negotiation Advocacy" 
@@ -71,11 +71,10 @@ export default function BuyProperty() {
             <div className="bg-surface rounded-2xl shadow-luxury border border-border p-10 lg:p-16">
               <h4 className="text-2xl font-display font-bold text-primary mb-8">Comprehensive Services</h4>
               <ul className="space-y-6">
-                <BuyingServiceItem text="Exclusive MLS access and off-market searches" />
+                <BuyingServiceItem text="MLS access and potential off-market searches" />
                 <BuyingServiceItem text="In-depth market and property analysis" />
                 <BuyingServiceItem text="Professional offer preparation and negotiation" />
                 <BuyingServiceItem text="Coordination of inspections and due diligence" />
-                <BuyingServiceItem text="Closing oversight and legal coordination" />
                 <BuyingServiceItem text="Post-purchase management integration" />
               </ul>
               

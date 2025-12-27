@@ -48,7 +48,7 @@ export default function SellProperty() {
                    <MarketingPillar 
                      icon="📸" 
                      title="Cinematic Media" 
-                     description="High-definition photography and 4K virtual tours that capture the essence of your home."
+                     description="High-definition photography and 4K virtual tours that capture the essence of your home. Metaport available on all properties."
                    />
                    <MarketingPillar 
                      icon="🌐" 
@@ -103,7 +103,7 @@ export default function SellProperty() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ServiceCard text="Professional staging consultation" />
-            <ServiceCard text="Premium signage and brochures" />
+            <ServiceCard text="Premium signage" />
             <ServiceCard text="Social media ad campaigns" />
             <ServiceCard text="Broker open house events" />
             <ServiceCard text="Direct email marketing" />

@@ -86,13 +86,12 @@ export default function Contact() {
                   title="Direct Inquiries"
                   content={<>
                     <a href="tel:+14075697595" className="hover:text-secondary transition-colors">+1 (407) 569-7595</a><br />
-                    <span className="text-sm opacity-60">Fax: +1 (863) 852-8418</span>
                   </>}
                 />
                 <ContactMethod 
                   icon="✉️" 
                   title="eMail"
-                  content={<a href="mailto:info@chamberlainsinternational.com" className="hover:text-secondary transition-colors">info@chamberlainsinternational.com</a>}
+                  content={<a href="mailto:tdonaghue@tampabay.rr.com" className="hover:text-secondary transition-colors">tdonaghue@tampabay.rr.com</a>}
                 />
                 <ContactMethod 
                   icon="⏰" 
@@ -167,7 +166,9 @@ export default function Contact() {
                         <option value="">Select a service...</option>
                         <option value="Buying Property">Bespoke Acquisition</option>
                         <option value="Selling Property">Strategic Listing</option>
-                        <option value="Property Management">Preserve Management</option>
+                        <option value="Property Management">Property Management</option>
+                        <option value="Long-Term Leasing">Long-Term Leasing</option>
+                        <option value="Vacation Rentals">Vacation Rentals</option>
                         <option value="General Inquiry">General Inquiry</option>
                       </select>
                     </div>
