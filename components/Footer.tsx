@@ -91,7 +91,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] text-white/50">
-          <p>© {currentYear} Chamberlains Real Estate International, LLC. All rights reserved.</p>
+          <p>© {currentYear} Chamberlains Real Estate International, Inc. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
