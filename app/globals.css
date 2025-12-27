@@ -1,19 +1,21 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #1e293b;
   
-  /* Chamberlains & Preserve Brand Colors */
-  --chamberlains-navy: #1e3a5f;
-  --chamberlains-blue: #2563eb;
-  --preserve-green: #10b981;
-  --warm-accent: #f59e0b;
+  /* Updated Brand Colors - Working with the logos */
+  --chamberlains-navy: #1a3a5e;
+  --chamberlains-blue: #2e5c8a;
+  --preserve-green: #4a7c59;
+  --preserve-gold: #c9a961;
+  --warm-accent: #d4a574;
   
   /* Neutral Colors */
   --slate-gray: #64748b;
-  --light-gray: #f1f5f9;
-  --dark-gray: #1e293b;
+  --light-gray: #f8fafc;
+  --dark-gray: #0f172a;
 }
 
 @theme inline {
@@ -24,6 +26,7 @@
   --color-chamberlains-navy: var(--chamberlains-navy);
   --color-chamberlains-blue: var(--chamberlains-blue);
   --color-preserve-green: var(--preserve-green);
+  --color-preserve-gold: var(--preserve-gold);
   --color-warm-accent: var(--warm-accent);
   
   /* Custom Neutrals */

@@ -8,17 +8,17 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-chamberlains-navy text-white sticky top-0 z-50 shadow-lg">
+    <header className="bg-gradient-to-r from-chamberlains-navy to-chamberlains-blue text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo and Company Info */}
           <Link href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
-            <div className="w-14 h-14 relative flex-shrink-0 bg-white rounded-full p-1">
+            <div className="w-14 h-14 relative flex-shrink-0">
               <Image 
                 src="/logo.png" 
                 alt="Chamberlains Real Estate International" 
                 fill
-                className="object-contain p-1"
+                className="object-contain"
                 sizes="56px"
                 priority
               />
@@ -27,7 +27,7 @@ export default function Header() {
               <div className="font-semibold text-base leading-tight">Chamberlains Real Estate International</div>
               <a 
                 href="tel:+14075697595" 
-                className="text-sm opacity-90 hover:text-chamberlains-blue transition-colors"
+                className="text-sm opacity-90 hover:opacity-100 transition-opacity"
                 onClick={(e) => e.stopPropagation()}
               >
                 +1 (407) 569-7595
@@ -37,7 +37,7 @@ export default function Header() {
               <div className="font-semibold text-sm leading-tight">Chamberlains Real Estate</div>
               <a 
                 href="tel:+14075697595" 
-                className="text-xs opacity-90 hover:text-chamberlains-blue transition-colors"
+                className="text-xs opacity-90 hover:opacity-100 transition-opacity"
                 onClick={(e) => e.stopPropagation()}
               >
                 (407) 569-7595
@@ -79,7 +79,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/contact" 
-              className="ml-2 bg-chamberlains-blue hover:bg-blue-600 px-4 lg:px-6 py-2 rounded transition-colors text-sm lg:text-base font-semibold"
+              className="ml-2 bg-preserve-gold hover:bg-warm-accent px-4 lg:px-6 py-2 rounded transition-colors text-sm lg:text-base font-semibold text-chamberlains-navy"
             >
               Contact
             </Link>
@@ -149,7 +149,7 @@ export default function Header() {
               </Link>
               <a 
                 href="tel:+14075697595" 
-                className="px-4 py-2 bg-chamberlains-blue hover:bg-blue-600 rounded transition-colors font-semibold text-center"
+                className="px-4 py-2 bg-preserve-gold hover:bg-warm-accent text-chamberlains-navy rounded transition-colors font-semibold text-center"
               >
                 📞 +1 (407) 569-7595
               </a>

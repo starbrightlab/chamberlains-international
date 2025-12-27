@@ -15,22 +15,22 @@ export default function PropertyManagement() {
       <Header />
       
       {/* Hero */}
-      <section className="relative h-80 flex items-center justify-center bg-gradient-to-br from-preserve-green to-green-700">
+      <section className="relative h-96 flex items-center justify-center bg-gradient-to-br from-preserve-green via-chamberlains-blue to-chamberlains-navy">
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <div className="flex flex-col items-center mb-6">
-            <div className="w-24 h-24 relative mb-4 bg-white rounded-full p-2">
+            <div className="w-32 h-32 relative mb-6">
               <Image 
                 src="/ppm-logo.png" 
                 alt="Preserve Property Management" 
                 fill 
-                className="object-contain p-1" 
-                sizes="96px" 
+                className="object-contain drop-shadow-2xl" 
+                sizes="128px" 
                 priority 
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold font-display">Preserve Property Management</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-3">Preserve Property Management</h1>
           </div>
-          <p className="text-xl opacity-90">Professional care for your investment properties</p>
+          <p className="text-xl md:text-2xl opacity-95">Professional care for your investment properties</p>
         </div>
       </section>
 
