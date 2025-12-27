@@ -13,12 +13,14 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo and Contact */}
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 relative">
+            <div className="w-12 h-12 relative flex-shrink-0">
               <Image 
                 src="/logo.png" 
                 alt="Chamberlains Real Estate International" 
                 fill
                 className="object-contain"
+                sizes="48px"
+                priority
               />
             </div>
             <div className="hidden md:block">

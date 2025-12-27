@@ -9,8 +9,14 @@ export default function Footer() {
           {/* Chamberlains Section */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 relative mr-3">
-                <Image src="/logo.png" alt="Chamberlains" fill className="object-contain" />
+              <div className="w-10 h-10 relative mr-3 flex-shrink-0">
+                <Image 
+                  src="/logo.png" 
+                  alt="Chamberlains" 
+                  fill 
+                  className="object-contain"
+                  sizes="40px"
+                />
               </div>
               <h3 className="font-semibold text-sm">Chamberlains Real Estate</h3>
             </div>
@@ -22,8 +28,14 @@ export default function Footer() {
           {/* Preserve Section */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 relative mr-3">
-                <Image src="/ppm-logo.jpg" alt="Preserve" fill className="object-contain" />
+              <div className="w-10 h-10 relative mr-3 flex-shrink-0">
+                <Image 
+                  src="/ppm-logo.png" 
+                  alt="Preserve" 
+                  fill 
+                  className="object-contain"
+                  sizes="40px"
+                />
               </div>
               <h3 className="font-semibold text-sm">Preserve Property Management</h3>
             </div>

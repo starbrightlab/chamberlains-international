@@ -2,23 +2,8 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useState } from 'react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement form submission (Netlify Forms or email service)
-    alert('Form submission will be implemented with email service');
-  };
-
   return (
     <main>
       <Header />
@@ -86,7 +71,25 @@ export default function Contact() {
               <div className="bg-light-gray p-8 rounded-lg">
                 <h3 className="text-2xl font-semibold text-chamberlains-navy mb-6">Send Us A Message</h3>
                 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  action="/contact/success"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  className="space-y-4"
+                >
+                  {/* Hidden fields for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  
+                  {/* Honeypot for spam prevention */}
+                  <div className="hidden" aria-hidden="true">
+                    <label>
+                      Don't fill this out if you're human: 
+                      <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                    </label>
+                  </div>
+
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-chamberlains-navy mb-1">
                       Name *
@@ -94,10 +97,9 @@ export default function Contact() {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
                     />
                   </div>
 
@@ -108,10 +110,9 @@ export default function Contact() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
                     />
                   </div>
 
@@ -122,9 +123,8 @@ export default function Contact() {
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     />
                   </div>
 
@@ -134,17 +134,16 @@ export default function Contact() {
                     </label>
                     <select
                       id="subject"
+                      name="subject"
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
-                      value={formData.subject}
-                      onChange={(e) => setFormData({...formData, subject: e.target.value})}
                     >
                       <option value="">Select a subject...</option>
-                      <option value="buy">Buying Property</option>
-                      <option value="sell">Selling Property</option>
-                      <option value="management">Property Management</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="other">Other</option>
+                      <option value="Buying Property">Buying Property</option>
+                      <option value="Selling Property">Selling Property</option>
+                      <option value="Property Management">Property Management</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
@@ -154,11 +153,10 @@ export default function Contact() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       required
                       rows={6}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                     />
                   </div>
 

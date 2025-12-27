@@ -18,8 +18,8 @@ export default function PropertyManagement() {
       <section className="relative h-80 flex items-center justify-center bg-gradient-to-br from-preserve-green to-green-700">
         <div className="relative z-10 text-center text-white px-4">
           <div className="flex items-center justify-center mb-4">
-            <div className="w-16 h-16 relative mr-3">
-              <Image src="/ppm-logo.jpg" alt="Preserve Property Management" fill className="object-contain" />
+            <div className="w-16 h-16 relative mr-3 flex-shrink-0">
+              <Image src="/ppm-logo.png" alt="Preserve Property Management" fill className="object-contain" sizes="64px" priority />
             </div>
             <h1 className="text-5xl font-bold font-display">Property Management</h1>
           </div>
