@@ -5,170 +5,116 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Property Management Services | Preserve Property Management',
-  description: 'Professional vacation rental and long-term property management in Central Florida. No-contract, transparent service since 2003.',
+  title: 'Preserve Property Management | Central Florida',
+  description: 'Bespoke property care and vacation rental management with a commitment to excellence and a no-contract philosophy.',
 };
 
 export default function PropertyManagement() {
   return (
-    <main>
+    <main className="bg-background min-h-screen">
       <Header />
       
-      {/* Hero */}
-      <section className="relative py-20 bg-gradient-to-br from-navy to-navy/90">
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-8">
-            <div className="w-32 h-32 relative">
+      {/* Hero Section */}
+      <section className="relative pt-48 pb-32 overflow-hidden bg-primary text-white">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/head.jpg" 
+            alt="Luxury Property Management" 
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary" />
+        </div>
+        
+        <div className="container-custom relative z-10 text-center">
+          <div className="flex justify-center mb-10">
+            <div className="w-40 h-40 relative group">
+              <div className="absolute inset-0 bg-secondary/20 rounded-full blur-2xl group-hover:bg-secondary/40 transition-all duration-700" />
               <Image 
                 src="/ppm-logo.png" 
                 alt="Preserve Property Management" 
                 fill 
-                className="object-contain" 
-                sizes="128px" 
+                className="object-contain relative z-10" 
+                sizes="160px" 
                 priority 
               />
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold font-display mb-4">
-            Preserve Property Management
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
+            Preserve <span className="text-secondary">Property</span> Management
           </h1>
-          <p className="text-xl text-white/90">
-            Professional care for your investment properties
+          <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+            Professional care for your investment properties, delivered with 
+            unwavering transparency and exceptional standards.
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-chamberlains-navy mb-4">Our Services</h2>
-            <p className="text-lg text-slate-gray max-w-3xl mx-auto">
-              Established in 2003, Preserve Property Management specializes in professional leasing and 
-              management of residential and investment properties. We offer both vacation rentals and 
-              long-term leasing in Polk County (Davenport) and Osceola County (Champions Gate & Kissimmee).
-            </p>
+      {/* Philosophy Section */}
+      <section className="section-padding overflow-hidden">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center mb-24 relative">
+             <div className="absolute -top-12 left-1/2 -translate-x-1/2 text-primary/5 text-9xl font-display font-bold whitespace-nowrap select-none">TRUSTED CARE</div>
+            <h2 className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-sm mb-6 relative">The Preserve Promise</h2>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-8 leading-tight">
+              A Philosophy Built on <br />Performance, Not Contracts.
+            </h3>
+            <div className="p-10 bg-accent/5 rounded-2xl border border-accent/20 italic text-xl text-primary leading-relaxed shadow-soft">
+              &ldquo;We don&apos;t believe in locking our clients into restrictive contracts. We are so confident in 
+              the quality of our service that if we don&apos;t deliver excellence, you are free to transition 
+              without penalty.&rdquo;
+            </div>
           </div>
 
-          {/* No Contract Promise */}
-          <div className="bg-preserve-green/10 p-8 rounded-lg mb-12 text-center">
-            <h3 className="text-2xl font-bold text-chamberlains-navy mb-3">No-Contract Philosophy</h3>
-            <p className="text-lg text-slate-gray max-w-2xl mx-auto">
-              We don&apos;t believe in locking our clients into contracts. We&apos;re so confident in our services 
-              that if we don&apos;t deliver what we promise, you&apos;re free to move to another company without 
-              any penalty. But we know that won&apos;t happen.
-            </p>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Vacation Rentals */}
-            <div className="bg-white border-2 border-preserve-green/20 rounded-lg p-8">
-              <h3 className="text-2xl font-semibold text-chamberlains-navy mb-4">Vacation Rentals</h3>
-              <ul className="space-y-3 text-slate-gray">
-                <li className="flex items-start">
-                  <span className="text-preserve-green mr-2">✓</span>
-                  <span>Property evaluation and rental pricing</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-preserve-green mr-2">✓</span>
-                  <span>Professional marketing and listing management</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-preserve-green mr-2">✓</span>
-                  <span>Guest screening and check-in/check-out</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-preserve-green mr-2">✓</span>
-                  <span>Professional housekeeping services</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-preserve-green mr-2">✓</span>
-                  <span>24/7 emergency support</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-preserve-green mr-2">✓</span>
-                  <span>Regular property inspections</span>
-                </li>
-              </ul>
-            </div>
+            <ManagementCard 
+              type="vacation"
+              title="Vacation Rentals"
+              description="Maximizing revenue through professional marketing and meticulous guest relations for short-term resort stays."
+              features={[
+                "Global marketing across major travel platforms",
+                "Dynamic pricing and occupancy optimization",
+                "5-star guest screening and check-in services",
+                "Premium housekeeping and linen services",
+                "24/7 emergency owner & guest support",
+                "Detailed monthly financial performance reports"
+              ]}
+            />
 
-            {/* Long-Term Leasing */}
-            <div className="bg-white border-2 border-chamberlains-blue/20 rounded-lg p-8">
-              <h3 className="text-2xl font-semibold text-chamberlains-navy mb-4">Long-Term Leasing</h3>
-              <ul className="space-y-3 text-slate-gray">
-                <li className="flex items-start">
-                  <span className="text-chamberlains-blue mr-2">✓</span>
-                  <span>Comprehensive tenant screening</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-chamberlains-blue mr-2">✓</span>
-                  <span>Lease preparation and management</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-chamberlains-blue mr-2">✓</span>
-                  <span>Rent collection and accounting</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-chamberlains-blue mr-2">✓</span>
-                  <span>Property maintenance coordination</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-chamberlains-blue mr-2">✓</span>
-                  <span>Regular property inspections</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-chamberlains-blue mr-2">✓</span>
-                  <span>Legal compliance and documentation</span>
-                </li>
-              </ul>
-            </div>
+            {/* Long Term */}
+            <ManagementCard 
+              type="longterm"
+              title="Long-Term Leasing"
+              description="Protecting your long-term assets with rigorous tenant selection and proactive maintenance management."
+              features={[
+                "Comprehensive nationwide tenant screening",
+                "Professional lease preparation and legal oversight",
+                "Automated rent collection and direct disbursements",
+                "Proactive property maintenance coordination",
+                "Bi-annual detailed property inspections",
+                "Complete legal compliance and documentation"
+              ]}
+            />
           </div>
+        </div>
+      </section>
 
-          {/* Additional Services */}
-          <div className="bg-light-gray p-8 rounded-lg mb-12">
-            <h3 className="text-2xl font-bold text-chamberlains-navy mb-6 text-center">Additional Services</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Maintenance & Repairs</h4>
-                <p className="text-sm text-slate-gray">Qualified tradesmen for all property maintenance needs</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Pool & Landscaping</h4>
-                <p className="text-sm text-slate-gray">Professional pool service and landscape maintenance</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Security Systems</h4>
-                <p className="text-sm text-slate-gray">Installation and monitoring recommendations</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Interior Design</h4>
-                <p className="text-sm text-slate-gray">Furniture packages and property upgrades</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Property Inspections</h4>
-                <p className="text-sm text-slate-gray">Regular monitoring and detailed reports</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Financial Reporting</h4>
-                <p className="text-sm text-slate-gray">Monthly statements and annual tax documents</p>
-              </div>
-            </div>
+      {/* Additional Services Grid */}
+      <section className="section-padding bg-surface border-y border-border">
+        <div className="container-custom">
+          <div className="text-center mb-20">
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-primary">Ancillary Services</h3>
           </div>
-
-          {/* CTA */}
-          <div className="bg-preserve-green/10 p-8 rounded-lg text-center">
-            <h3 className="text-2xl font-bold text-chamberlains-navy mb-4">Ready to Protect Your Investment?</h3>
-            <p className="text-slate-gray mb-6">Let us show you how professional management maximizes your returns</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14075697595" className="bg-preserve-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
-                📞 Call (407) 569-7595
-              </a>
-              <a href="/contact" className="bg-white text-preserve-green border-2 border-preserve-green px-8 py-3 rounded-lg font-semibold hover:bg-preserve-green hover:text-white transition-colors">
-                ✉️ Request Information
-              </a>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <AncillaryItem title="Maintenance & Repairs" description="Vetted, licensed tradesmen for every property requirement." />
+            <AncillaryItem title="Pool & Landscape" description="Specialized care for your outdoor amenities and curb appeal." />
+            <AncillaryItem title="Security Systems" description="Modern monitoring solutions for peace of mind." />
+            <AncillaryItem title="Interior Design" description="Elevated furniture packages designed to increase rental yields." />
+            <AncillaryItem title="Regular Inspections" description="Detailed digital reports with photographic documentation." />
+            <AncillaryItem title="Financial Services" description="Seamless tax document preparation and financial reporting." />
           </div>
         </div>
       </section>
@@ -176,5 +122,36 @@ export default function PropertyManagement() {
       <ContactCTA />
       <Footer />
     </main>
+  );
+}
+
+function ManagementCard({ title, description, features, type }: { title: string; description: string; features: string[]; type: 'vacation' | 'longterm' }) {
+  const accentColor = type === 'vacation' ? 'border-accent' : 'border-secondary';
+  const iconColor = type === 'vacation' ? 'text-accent' : 'text-secondary';
+
+  return (
+    <div className={`bg-white p-10 lg:p-16 rounded-2xl shadow-luxury border-t-8 ${accentColor} h-full flex flex-col`}>
+      <h4 className="text-3xl font-display font-bold text-primary mb-6">{title}</h4>
+      <p className="text-muted text-lg mb-12 leading-relaxed">{description}</p>
+      <ul className="space-y-5 flex-grow">
+        {features.map((feature, i) => (
+          <li key={i} className="flex items-start gap-4 text-primary font-medium border-b border-border/50 pb-4 last:border-0 last:pb-0">
+            <svg className={`w-5 h-5 ${iconColor} mt-1 shrink-0`} fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span className="text-[15px]">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function AncillaryItem({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="p-8 hover:bg-background rounded-2xl transition-all duration-300 group border border-transparent hover:border-border">
+      <h4 className="text-xl font-display font-bold text-primary mb-3 group-hover:text-accent transition-colors">{title}</h4>
+      <p className="text-muted leading-relaxed text-sm">{description}</p>
+    </div>
   );
 }

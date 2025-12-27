@@ -1,100 +1,113 @@
 import Header from '@/components/Header';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sell Your Florida Property | Chamberlains Real Estate',
-  description: 'Maximize your property value with expert marketing and negotiation from Chamberlains Real Estate International.',
+  title: 'Sell Your Florida Residence | Chamberlains Real Estate',
+  description: 'Maximize the value of your Florida property with our international marketing reach and 40 years of expertise.',
 };
 
 export default function SellProperty() {
   return (
-    <main>
+    <main className="bg-background min-h-screen">
       <Header />
       
-      {/* Hero */}
-      <section className="relative h-80 flex items-center justify-center bg-gradient-to-br from-warm-accent to-yellow-600">
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl font-bold mb-4 font-display">Sell Your Property</h1>
-          <p className="text-xl opacity-90">Maximize your value with expert marketing</p>
+      {/* Hero Section */}
+      <section className="relative pt-48 pb-32 overflow-hidden bg-primary">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/head.jpg" 
+            alt="Selling Luxury Florida Real Estate" 
+            fill
+            className="object-cover opacity-30 scale-x-[-1]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 to-primary" />
+        </div>
+        
+        <div className="container-custom relative z-10 text-center">
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8">
+            Exquisite <span className="text-secondary">Marketing</span>
+          </h1>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+            Elevating your property to reach a global audience of qualified buyers 
+            with precision and sophistication.
+          </p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-chamberlains-navy mb-6">Expert Property Marketing</h2>
-          
-          <p className="text-lg text-slate-gray mb-8">
-            At Chamberlains Real Estate International, we use comprehensive marketing strategies and 
-            40+ years of experience to ensure your property reaches the right buyers and achieves maximum value.
-          </p>
-
-          <div className="bg-light-gray p-6 rounded-lg my-8">
-            <h3 className="text-2xl font-semibold text-chamberlains-navy mb-4">Our Selling Services</h3>
-            <ul className="space-y-3 text-slate-gray">
-              <li className="flex items-start">
-                <span className="text-warm-accent mr-2">✓</span>
-                <span>Professional property valuation and pricing strategy</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-warm-accent mr-2">✓</span>
-                <span>High-quality photography and virtual tours</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-warm-accent mr-2">✓</span>
-                <span>Multiple Listing Service (MLS) exposure</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-warm-accent mr-2">✓</span>
-                <span>International marketing reach</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-warm-accent mr-2">✓</span>
-                <span>Open houses and private showings</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-warm-accent mr-2">✓</span>
-                <span>Expert negotiation and contract management</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-warm-accent mr-2">✓</span>
-                <span>Closing coordination and support</span>
-              </li>
-            </ul>
-          </div>
-
-          <h3 className="text-2xl font-semibold text-chamberlains-navy mb-4 mt-8">Marketing That Works</h3>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-4xl mb-3">📸</div>
-              <h4 className="font-semibold text-chamberlains-navy mb-2">Professional Media</h4>
-              <p className="text-slate-gray text-sm">High-quality photos and virtual tours that showcase your property</p>
+      {/* Content Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
+            <div className="order-2 lg:order-1 relative">
+               <div className="aspect-[4/5] bg-surface rounded-2xl shadow-luxury border border-border overflow-hidden relative z-10 p-12 flex flex-col justify-center">
+                 <div className="space-y-12">
+                   <MarketingPillar 
+                     icon="📸" 
+                     title="Cinematic Media" 
+                     description="High-definition photography and 4K virtual tours that capture the essence of your home."
+                   />
+                   <MarketingPillar 
+                     icon="🌐" 
+                     title="Global Exposure" 
+                     description="Instant listing on major international portals and our exclusive global network."
+                   />
+                   <MarketingPillar 
+                     icon="📊" 
+                     title="Data-Driven Pricing" 
+                     description="Strategic valuation to ensure your property is positioned for maximum interest."
+                   />
+                 </div>
+               </div>
+               <div className="absolute -top-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-0" />
             </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🌐</div>
-              <h4 className="font-semibold text-chamberlains-navy mb-2">Online Presence</h4>
-              <p className="text-slate-gray text-sm">MLS, real estate portals, and international marketing</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">🤝</div>
-              <h4 className="font-semibold text-chamberlains-navy mb-2">Broker Network</h4>
-              <p className="text-slate-gray text-sm">Connections with agents and buyers worldwide</p>
+
+            <div className="order-1 lg:order-2">
+              <h2 className="text-secondary font-sans font-bold uppercase tracking-widest text-sm mb-4">The Strategy</h2>
+              <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-8 leading-tight">
+                Designed to Achieve <br />Maximum Value
+              </h3>
+              <p className="text-lg text-muted mb-10 leading-relaxed">
+                Selling a property in today's market requires more than just a listing. 
+                It requires a comprehensive strategy that combines traditional expertise 
+                with modern digital reach.
+              </p>
+              
+              <div className="space-y-6">
+                <SellingPoint title="Bespoke Marketing Plans" description="Every home is unique; your marketing should be too." />
+                <SellingPoint title="Expert Negotiation" description="Securing the highest possible return for your investment." />
+                <SellingPoint title="Seamless Coordination" description="Managing every detail from listing to the final closing." />
+              </div>
+
+              <div className="mt-12">
+                <Link 
+                  href="/contact" 
+                  className="btn-secondary text-lg px-10 inline-block"
+                >
+                  Request a Valuation
+                </Link>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-warm-accent/10 p-8 rounded-lg text-center my-8">
-            <h3 className="text-2xl font-bold text-chamberlains-navy mb-4">Ready to Sell Your Property?</h3>
-            <p className="text-slate-gray mb-6">Get a free property valuation and marketing plan</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14075697595" className="bg-warm-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors">
-                📞 Call (407) 569-7595
-              </a>
-              <a href="/contact" className="bg-white text-warm-accent border-2 border-warm-accent px-8 py-3 rounded-lg font-semibold hover:bg-warm-accent hover:text-white transition-colors">
-                ✉️ Request Valuation
-              </a>
-            </div>
+      {/* Services List */}
+      <section className="section-padding bg-surface border-y border-border">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-primary">Full-Service Selling</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard text="Professional staging consultation" />
+            <ServiceCard text="Premium signage and brochures" />
+            <ServiceCard text="Social media ad campaigns" />
+            <ServiceCard text="Broker open house events" />
+            <ServiceCard text="Direct email marketing" />
+            <ServiceCard text="International portal distribution" />
           </div>
         </div>
       </section>
@@ -102,5 +115,39 @@ export default function SellProperty() {
       <ContactCTA />
       <Footer />
     </main>
+  );
+}
+
+import Link from 'next/link';
+
+function MarketingPillar({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="flex gap-6">
+      <div className="text-4xl">{icon}</div>
+      <div>
+        <h4 className="text-xl font-display font-bold text-primary mb-2">{title}</h4>
+        <p className="text-muted leading-relaxed text-sm">{description}</p>
+      </div>
+    </div>
+  );
+}
+
+function SellingPoint({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="flex items-start gap-4">
+      <div className="w-1.5 h-6 bg-secondary mt-1 shrink-0" />
+      <div>
+        <h4 className="font-bold text-primary">{title}</h4>
+        <p className="text-muted text-sm">{description}</p>
+      </div>
+    </div>
+  );
+}
+
+function ServiceCard({ text }: { text: string }) {
+  return (
+    <div className="p-8 bg-background rounded-xl border border-border text-center hover:border-secondary/30 transition-colors">
+      <p className="font-medium text-primary uppercase tracking-wider text-xs">{text}</p>
+    </div>
   );
 }

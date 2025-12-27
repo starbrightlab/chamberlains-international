@@ -1,40 +1,84 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative h-[700px] flex items-center justify-center">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/head.jpg')" }}
-      />
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-navy/70" />
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+      {/* Background Image with elegant mask */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/head.jpg" 
+          alt="Florida Luxury Real Estate" 
+          fill
+          className="object-cover object-center scale-105 animate-subtle-zoom"
+          priority
+        />
+        {/* Sophisticated Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+      </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 font-display">
-          Your Gateway to<br />Florida Real Estate
-        </h1>
-        <p className="text-xl sm:text-2xl mb-10 text-white/90 max-w-3xl mx-auto">
-          International expertise. Local knowledge. Professional property management.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/buy"
-            className="bg-white text-navy hover:bg-gray-100 px-10 py-4 rounded-md text-lg font-bold transition-colors shadow-xl"
-          >
-            Find Your Property
-          </Link>
-          <Link 
-            href="/property-management"
-            className="bg-gold text-white hover:bg-gold/90 px-10 py-4 rounded-md text-lg font-bold transition-colors shadow-xl"
-          >
-            Manage My Property
-          </Link>
+      <div className="container-custom relative z-10">
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8 animate-fade-in-up">
+            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            International Expertise • Local Excellence
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.1] animate-fade-in-up animation-delay-200">
+            Elevating Your <br />
+            <span className="text-secondary">Florida</span> Experience
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-400">
+            Boutique real estate services and premium property management 
+            for the most discerning local and international clients.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-5 animate-fade-in-up animation-delay-600">
+            <Link 
+              href="/buy"
+              className="btn-secondary text-lg px-10"
+            >
+              Explore Properties
+            </Link>
+            <Link 
+              href="/property-management"
+              className="btn-outline border-white text-white hover:bg-white hover:text-primary text-lg px-10"
+            >
+              Management Services
+            </Link>
+          </div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
+          <div className="w-1 h-2 bg-white/50 rounded-full" />
+        </div>
+      </div>
+      
+      <style jsx>{`
+        @keyframes subtle-zoom {
+          from { transform: scale(1.05); }
+          to { transform: scale(1.15); }
+        }
+        .animate-subtle-zoom {
+          animation: subtle-zoom 20s infinite alternate ease-in-out;
+        }
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+        }
+        .animation-delay-200 { animation-delay: 0.2s; }
+        .animation-delay-400 { animation-delay: 0.4s; }
+        .animation-delay-600 { animation-delay: 0.6s; }
+      `}</style>
     </section>
   );
 }

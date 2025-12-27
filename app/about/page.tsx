@@ -4,126 +4,140 @@ import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | Chamberlains Real Estate & Preserve Property Management',
-  description: 'Meet our experienced team serving Central Florida real estate and property management needs since 2003.',
+  title: 'About Our Firm | Chamberlains Real Estate & Preserve Management',
+  description: 'Meet the team behind Central Florida\'s premier real estate and property management firm. Over 40 years of combined international expertise.',
 };
 
 export default function About() {
   return (
-    <main>
+    <main className="bg-background min-h-screen">
       <Header />
       
-      {/* Hero */}
-      <section className="relative h-80 flex items-center justify-center bg-gradient-to-br from-chamberlains-navy to-slate-800">
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl font-bold mb-4 font-display">About Us</h1>
-          <p className="text-xl opacity-90">40+ years of real estate excellence</p>
+      {/* Page Hero */}
+      <section className="relative pt-40 pb-24 bg-primary overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+        <div className="container-custom relative z-10 text-center">
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">Our Legacy</h1>
+          <p className="text-xl text-secondary font-sans uppercase tracking-[0.3em] font-medium">40+ Years of Combined Excellence</p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-chamberlains-navy mb-6">Chamberlains Real Estate International</h2>
-            <p className="text-lg text-slate-gray mb-4">
-              A well established USA, UK & European real estate company, Chamberlains Real Estate International 
-              was founded to provide excellent service to local and International clients. We are one of the 
-              most respected real estate companies in the UK, Europe and the Mediterranean, and have now 
-              expanded our operations with offices in Orlando and Fort Lauderdale Florida.
-            </p>
-            <p className="text-lg text-slate-gray mb-4">
-              We serve clients across the USA & Canada, Caribbean, Central & South America. We are a team of 
-              real estate specialists, dealing with straightforward, difficult, and complex transactions on 
-              behalf of our clients to make the process of investing in property as easy and comfortable as possible.
-            </p>
+      {/* Philosophy Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
+            <div>
+              <h2 className="text-secondary font-sans font-bold uppercase tracking-widest text-sm mb-4">The Firm</h2>
+              <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-8 leading-tight">
+                Chamberlains Real Estate <br />International
+              </h3>
+              <div className="space-y-6 text-lg text-muted leading-relaxed">
+                <p>
+                  Founded on the principles of integrity and unparalleled service, Chamberlains has evolved from 
+                  a respected European agency into a global force with deep roots in Central Florida.
+                </p>
+                <p>
+                  Our expansion into Orlando and Fort Lauderdale brings a sophisticated, international perspective 
+                   to the local market, serving clients across the USA, Canada, and Europe with a level of 
+                  precision rarely found in standard firms.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="aspect-[4/5] bg-surface rounded-2xl shadow-luxury border border-border overflow-hidden relative z-10 p-12 flex flex-col justify-center">
+                <h4 className="text-2xl font-display font-bold text-primary mb-6 italic">&ldquo;Our commitment is to provide the specialized real estate service you deserve, keeping you informed on trends in the marketplace using global intelligence.&rdquo;</h4>
+                <div className="w-12 h-1 bg-secondary mb-4"></div>
+                <p className="font-bold text-primary uppercase tracking-widest text-sm">Terry, Principal Broker</p>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl z-0" />
+            </div>
           </div>
 
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-chamberlains-navy mb-6">Preserve Property Management</h2>
-            <p className="text-lg text-slate-gray">
-              Preserve Property Management was established in 2003, and specializes in the professional 
-              leasing and management of residential & investment properties. We handle both long-term 
-              leasing and short-term vacation rentals located in Polk County (Davenport) and Osceola County 
-              (Champions Gate & Kissimmee). Applying extremely high standards in the day to day running of 
-              the business ensures the results that you would expect, while the owner retains control of 
-              the investment at all times.
-            </p>
-          </div>
-
-          <div className="bg-light-gray p-8 rounded-lg mb-12">
-            <h3 className="text-2xl font-semibold text-chamberlains-navy mb-4">Why Choose Us?</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">REALTOR® Commitment</h4>
-                <p className="text-sm text-slate-gray">
-                  Only real estate licensees who are members of the NATIONAL ASSOCIATION OF REALTORS® 
-                  are properly called Realtors®. We subscribe to a strict code of ethics and maintain 
-                  a higher level of knowledge of the buying and selling process.
-                </p>
+          <div className="grid lg:grid-cols-2 gap-20 items-center flex-row-reverse">
+             <div className="order-2 lg:order-1 relative">
+              <div className="aspect-square bg-primary rounded-2xl shadow-luxury overflow-hidden relative z-10 flex items-center justify-center p-16">
+                 <div className="text-center text-white">
+                    <div className="text-6xl font-display font-bold text-secondary mb-2">2003</div>
+                    <p className="uppercase tracking-[0.2em] text-sm opacity-80">Established in Florida</p>
+                 </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">International Expertise</h4>
-                <p className="text-sm text-slate-gray">
-                  Our commitment as your International REALTOR® is to provide you with the specialized 
-                  real estate service you deserve, keeping you informed on trends in the marketplace 
-                  using the latest statistics.
+              <div className="absolute -top-10 -left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl z-0" />
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-accent font-sans font-bold uppercase tracking-widest text-sm mb-4">Property Care</h2>
+              <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-8 leading-tight">
+                Preserve Property <br />Management
+              </h3>
+              <div className="space-y-6 text-lg text-muted leading-relaxed">
+                <p>
+                  Established in 2003, Preserve was built to solve a critical need: professional, transparent 
+                  management for high-value residential and investment properties.
                 </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Professional Team</h4>
-                <p className="text-sm text-slate-gray">
-                  We&apos;ve established a strong professional team with unparalleled client service ethics, 
-                  offering superior support services than the standard real estate company.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-chamberlains-navy mb-2">Local Knowledge</h4>
-                <p className="text-sm text-slate-gray">
-                  Deep understanding of the Central Florida market, combined with international 
-                  perspective and connections.
+                <p>
+                  By applying extremely high standards to daily operations, we ensure that owners retain 
+                  full control of their investment while we handle the complexities of resort-style 
+                  management in Polk and Osceola Counties.
                 </p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div>
-            <h3 className="text-2xl font-semibold text-chamberlains-navy mb-6">Our Team</h3>
-            
-            <div className="space-y-6">
-              <div className="border-l-4 border-chamberlains-blue pl-6">
-                <h4 className="text-xl font-semibold text-chamberlains-navy mb-2">Terry</h4>
-                <p className="text-sm font-semibold text-chamberlains-blue mb-2">Principal Broker</p>
-                <p className="text-slate-gray">
-                  As the Principal Broker, Terry oversees and is responsible for all company operations. 
-                  He has over 40 years experience in a commercial environment where he accumulated his 
-                  knowledge through project/sales management and Financial Services. Terry has used this 
-                  understanding, combined with his experience to enhance the services the company now offers.
-                </p>
-              </div>
+      {/* Values Section */}
+      <section className="section-padding bg-surface border-y border-border">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6 text-center">Our Commitment</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <ValueCard 
+              title="REALTOR® Standards" 
+              description="Subscribing to a strict code of ethics and maintaining a higher level of knowledge."
+            />
+            <ValueCard 
+              title="Global Intelligence" 
+              description="Providing specialized services informed by global market trends and statistics."
+            />
+            <ValueCard 
+              title="Ethical Excellence" 
+              description="A strong professional team built on unparalleled client service ethics."
+            />
+            <ValueCard 
+              title="Local Authority" 
+              description="Deep local knowledge combined with international perspective and connections."
+            />
+          </div>
+        </div>
+      </section>
 
-              <div className="border-l-4 border-preserve-green pl-6">
-                <h4 className="text-xl font-semibold text-chamberlains-navy mb-2">Sona</h4>
-                <p className="text-sm font-semibold text-preserve-green mb-2">Attorney</p>
-                <p className="text-slate-gray">
-                  Sona is an Attorney specializing in condominium contracts and enforcement. She graduated 
-                  from Nova Law School in Fort Lauderdale, Florida. She has experience in both real estate 
-                  and immigration law, which allows her to partner with Chamberlains Real Estate International 
-                  to provide legal services pertaining to property purchases by domestic and overseas clients.
-                </p>
-              </div>  
-
-              <div className="border-l-4 border-warm-accent pl-6">
-                <h4 className="text-xl font-semibold text-chamberlains-navy mb-2">Lissette</h4>
-                <p className="text-sm font-semibold text-warm-accent mb-2">Director of Communications, Marketing & IT</p>
-                <p className="text-slate-gray">
-                  Speaking fluent English and Spanish, Lissette maintains and develops excellent communication 
-                  channels between all our Clients, Corporate Bodies and the Media. She designs and develops 
-                  all branding, marketing, and advertising material along with designing and maintaining the 
-                  company website and all computerized functions.
-                </p>
-              </div>
-            </div>
+      {/* Team Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+             <h2 className="text-secondary font-sans font-bold uppercase tracking-widest text-sm mb-4">Leadership</h2>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-primary">Our Specialists</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <TeamCard 
+              name="Terry" 
+              role="Principal Broker"
+              color="secondary"
+              description="With over 40 years of experience in commercial project and sales management, Terry oversees all operations with a focus on financial precision and client advocacy."
+            />
+            <TeamCard 
+              name="Sona" 
+              role="Attorney at Law"
+              color="primary"
+              description="Specializing in real estate and immigration law, Sona provides essential legal oversight for domestic and international property transactions."
+            />
+            <TeamCard 
+              name="Lissette" 
+              role="Director of Communications"
+              color="accent"
+              description="Fluent in English and Spanish, Lissette develops the firm's global communication strategy, branding, and digital infrastructure."
+            />
           </div>
         </div>
       </section>
@@ -131,5 +145,32 @@ export default function About() {
       <ContactCTA />
       <Footer />
     </main>
+  );
+}
+
+function ValueCard({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="text-center group">
+      <div className="w-1.5 h-12 bg-secondary/30 mx-auto mb-6 group-hover:bg-secondary transition-colors" />
+      <h4 className="text-xl font-display font-bold text-primary mb-4">{title}</h4>
+      <p className="text-muted leading-relaxed text-[15px]">{description}</p>
+    </div>
+  );
+}
+
+function TeamCard({ name, role, description, color }: { name: string; role: string; description: string; color: 'primary' | 'secondary' | 'accent' }) {
+  const colorMap = {
+    primary: 'border-primary text-primary',
+    secondary: 'border-secondary text-secondary',
+    accent: 'border-accent text-accent'
+  };
+
+  return (
+    <div className="bg-white p-10 rounded-2xl shadow-soft border border-border hover:border-transparent hover:shadow-luxury transition-all duration-500">
+      <div className={`w-12 h-1 border-b-4 mb-8 ${colorMap[color]}`} />
+      <h4 className="text-2xl font-display font-bold text-primary mb-1">{name}</h4>
+      <p className={`text-sm font-bold uppercase tracking-widest mb-6 ${colorMap[color]}`}>{role}</p>
+      <p className="text-muted leading-relaxed italic">&ldquo;{description}&rdquo;</p>
+    </div>
   );
 }

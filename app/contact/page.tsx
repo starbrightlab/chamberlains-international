@@ -44,74 +44,73 @@ export default function Contact() {
   };
 
   return (
-    <main>
+    <main className="bg-background min-h-screen">
       <Header />
       
-      {/* Hero */}
-      <section className="relative h-64 flex items-center justify-center bg-gradient-to-br from-chamberlains-navy to-chamberlains-blue">
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl font-bold mb-4 font-display">Contact Us</h1>
-          <p className="text-xl opacity-90">We're here to help with all your real estate needs</p>
+      {/* Header Section */}
+      <section className="relative pt-48 pb-24 bg-primary text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div className="container-custom relative z-10 text-center">
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">Connect With <span className="text-secondary">Us</span></h1>
+          <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed uppercase tracking-widest text-sm font-bold">
+            Private Consultations for Global Clients
+          </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12">
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-5 gap-20 items-start">
+            
             {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-chamberlains-navy mb-6">Get In Touch</h2>
-              <p className="text-lg text-slate-gray mb-8">
-                Whether you're looking to buy, sell, or manage property in Central Florida, 
-                we're here to help. Contact us today for a free consultation.
-              </p>
+            <div className="lg:col-span-2 space-y-16">
+              <div>
+                <h2 className="text-secondary font-sans font-bold uppercase tracking-widest text-sm mb-6">Our Presence</h2>
+                <h3 className="text-4xl font-display font-bold text-primary mb-8">Get In Touch</h3>
+                <p className="text-lg text-muted leading-relaxed mb-12">
+                  Whether you are initiating a property search or require specialized management for your 
+                  Florida portfolio, our team of experts is ready to assist.
+                </p>
+              </div>
 
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-chamberlains-navy mb-2">📍 Office Location</h3>
-                  <p className="text-slate-gray">
-                    213 Cardinal Court<br />
-                    Champions Gate, FL 33896<br />
-                    United States
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-chamberlains-navy mb-2">📞 Phone</h3>
-                  <p className="text-slate-gray">
-                    Office: <a href="tel:+14075697595" className="text-chamberlains-blue hover:underline">+1 (407) 569-7595</a><br />
-                    Fax: <a href="tel:+18638528418" className="text-slate-gray">+1 (863) 852-8418</a>
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-chamberlains-navy mb-2">✉️ Email</h3>
-                  <p className="text-slate-gray">
-                    <a href="mailto:info@chamberlainsinternational.com" className="text-chamberlains-blue hover:underline">
-                      info@chamberlainsinternational.com
-                    </a>
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-chamberlains-navy mb-2">⏰ Office Hours</h3>
-                  <p className="text-slate-gray">
-                    Monday - Friday: 9:00 AM - 5:00 PM<br />
-                    Saturday: By Appointment<br />
-                    Sunday: Closed
-                  </p>
-                </div>
+              <div className="space-y-10">
+                <ContactMethod 
+                  icon="📍" 
+                  title="Global Headquarters"
+                  content={<>213 Cardinal Court<br />Champions Gate, FL 33896</>}
+                />
+                <ContactMethod 
+                  icon="📞" 
+                  title="Direct Inquiries"
+                  content={<>
+                    <a href="tel:+14075697595" className="hover:text-secondary transition-colors">+1 (407) 569-7595</a><br />
+                    <span className="text-sm opacity-60">Fax: +1 (863) 852-8418</span>
+                  </>}
+                />
+                <ContactMethod 
+                  icon="✉️" 
+                  title="Digital Correspondence"
+                  content={<a href="mailto:info@chamberlainsinternational.com" className="hover:text-secondary transition-colors">info@chamberlainsinternational.com</a>}
+                />
+                <ContactMethod 
+                  icon="⏰" 
+                  title="Consultation Hours"
+                  content={<>Monday – Friday: 9:00 AM – 5:00 PM<br /><span className="text-sm opacity-60 italic">Weekends by Appointment Only</span></>}
+                />
               </div>
             </div>
 
             {/* Contact Form */}
-            <div>
-              <div className="bg-light-gray p-8 rounded-lg">
-                <h3 className="text-2xl font-semibold text-chamberlains-navy mb-6">Send Us A Message</h3>
+            <div className="lg:col-span-3">
+              <div className="bg-surface p-10 lg:p-16 rounded-2xl shadow-luxury border border-border relative overflow-hidden">
+                {/* Subtle design element */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-[100px]" />
+                
+                <h3 className="text-2xl font-display font-bold text-primary mb-10">Inquiry Submission</h3>
                 
                 {error && (
-                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-4">
+                  <div className="bg-red-50 border border-red-100 text-red-600 px-6 py-4 rounded-xl mb-8 text-sm font-medium">
                     {error}
                   </div>
                 )}
@@ -122,115 +121,85 @@ export default function Contact() {
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
-                  className="space-y-4"
+                  className="space-y-8"
                 >
-                  {/* Hidden fields for Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
-                  
-                  {/* Honeypot for spam prevention */}
-                  <div className="hidden" aria-hidden="true">
-                    <label>
-                      Don't fill this out if you're human: 
-                      <input name="bot-field" tabIndex={-1} autoComplete="off" />
-                    </label>
-                  </div>
+                  <div className="hidden"><input name="bot-field" /></div>
 
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-chamberlains-navy mb-1">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <FormInput 
+                      label="Full Name" 
+                      id="name" 
+                      type="text" 
+                      required 
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-chamberlains-navy mb-1">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
+                    <FormInput 
+                      label="Email Address" 
+                      id="email" 
+                      type="email" 
+                      required 
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     />
                   </div>
 
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-chamberlains-navy mb-1">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <FormInput 
+                      label="Telephone" 
+                      id="phone" 
+                      type="tel" 
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     />
+                    <div className="flex flex-col gap-2">
+                      <label htmlFor="subject" className="text-xs font-bold uppercase tracking-widest text-primary/60">Subject of Inquiry</label>
+                      <select
+                        id="subject"
+                        name="subject"
+                        required
+                        value={formData.subject}
+                        onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                        className="bg-transparent border-b-2 border-border py-3 focus:border-secondary outline-none transition-colors text-primary font-medium appearance-none cursor-pointer"
+                      >
+                        <option value="">Select a service...</option>
+                        <option value="Buying Property">Bespoke Acquisition</option>
+                        <option value="Selling Property">Strategic Listing</option>
+                        <option value="Property Management">Preserve Management</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                      </select>
+                    </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-chamberlains-navy mb-1">
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
-                    >
-                      <option value="">Select a subject...</option>
-                      <option value="Buying Property">Buying Property</option>
-                      <option value="Selling Property">Selling Property</option>
-                      <option value="Property Management">Property Management</option>
-                      <option value="General Inquiry">General Inquiry</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-chamberlains-navy mb-1">
-                      Message *
-                    </label>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-primary/60">Your Message</label>
                     <textarea
                       id="message"
                       name="message"
                       required
-                      rows={6}
+                      rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
+                      className="bg-transparent border-b-2 border-border py-3 focus:border-secondary outline-none transition-colors text-primary font-medium resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full px-8 py-3 rounded-lg font-semibold transition-colors ${
-                      isSubmitting 
-                        ? 'bg-gray-400 cursor-not-allowed text-white'
-                        : 'bg-chamberlains-blue hover:bg-blue-600 text-white'
-                    }`}
+                    className="btn-primary w-full group flex items-center justify-center gap-3 disabled:bg-slate-400"
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'Processing Submission...' : (
+                      <>
+                        Send Inquiry
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </>
+                    )}
                   </button>
                 </form>
-
-                <p className="text-xs text-slate-gray mt-4 text-center">
-                  * Required fields. We typically respond within 24 hours.
-                </p>
               </div>
             </div>
           </div>
@@ -239,5 +208,33 @@ export default function Contact() {
 
       <Footer />
     </main>
+  );
+}
+
+function ContactMethod({ icon, title, content }: { icon: string; title: string; content: React.ReactNode }) {
+  return (
+    <div className="flex gap-6 group">
+      <div className="w-14 h-14 bg-surface rounded-2xl shadow-soft flex items-center justify-center text-2xl border border-border group-hover:border-secondary/20 group-hover:shadow-luxury transition-all duration-300 shrink-0">
+        {icon}
+      </div>
+      <div>
+        <h4 className="text-xs font-bold uppercase tracking-widest text-primary/60 mb-2">{title}</h4>
+        <div className="text-primary font-bold text-lg leading-relaxed">{content}</div>
+      </div>
+    </div>
+  );
+}
+
+function FormInput({ label, id, ...props }: { label: string; id: string; [key: string]: any }) {
+  return (
+    <div className="flex flex-col gap-2">
+      <label htmlFor={id} className="text-xs font-bold uppercase tracking-widest text-primary/60">{label}</label>
+      <input
+        id={id}
+        name={id}
+        {...props}
+        className="bg-transparent border-b-2 border-border py-3 focus:border-secondary outline-none transition-colors text-primary font-medium"
+      />
+    </div>
   );
 }
