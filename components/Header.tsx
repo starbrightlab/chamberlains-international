@@ -35,10 +35,10 @@ export default function Header() {
               />
             </div>
             <div className="hidden lg:block">
-              <div className={`text-xl font-display font-bold transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-primary'}`}>
-                Chamberlains <span className="text-secondary font-sans font-medium text-base uppercase tracking-widest ml-1">International</span>
+              <div className={`text-xl font-display font-bold transition-colors duration-300 ${scrolled ? 'text-primary' : 'text-white'}`}>
+                Chamberlains <span className={`${scrolled ? 'text-secondary' : 'text-secondary-dark'} font-sans font-medium text-base uppercase tracking-widest ml-1`}>International</span>
               </div>
-              <div className="text-xs text-muted font-medium tracking-wider uppercase opacity-80">Real Estate & Property Management</div>
+              <div className={`text-xs font-medium tracking-wider uppercase transition-colors duration-300 ${scrolled ? 'text-muted opacity-80' : 'text-white/70'}`}>Real Estate & Property Management</div>
             </div>
           </Link>
 
@@ -54,7 +54,7 @@ export default function Header() {
             
             <Link 
               href="/contact" 
-              className="btn-secondary px-7 py-2.5 text-sm"
+              className={`${scrolled ? 'btn-secondary' : 'bg-white text-primary hover:bg-secondary hover:text-white'} px-7 py-2.5 text-sm rounded-lg font-semibold transition-all duration-300 shadow-lg active:scale-[0.98]`}
             >
               Get in Touch
             </Link>
@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-primary hover:bg-primary/5' : 'text-primary hover:bg-white/10'}`}
+            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-primary hover:bg-primary/5' : 'text-white hover:bg-white/10'}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -107,11 +107,11 @@ function NavLink({ href, children, scrolled }: { href: string; children: React.R
     <Link 
       href={href} 
       className={`text-[15px] font-medium transition-all duration-300 relative group ${
-        scrolled ? 'text-primary/80 hover:text-primary' : 'text-primary/80 hover:text-primary'
+        scrolled ? 'text-primary/80 hover:text-primary' : 'text-white/90 hover:text-white'
       }`}
     >
       {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+      <span className={`absolute -bottom-1 left-0 w-0 h-0.5 ${scrolled ? 'bg-secondary' : 'bg-white'} transition-all duration-300 group-hover:w-full`}></span>
     </Link>
   );
 }
