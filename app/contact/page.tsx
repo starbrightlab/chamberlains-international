@@ -29,6 +29,7 @@ export default function Contact() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         body: new URLSearchParams(formDataObj as any).toString()
       });
 
@@ -90,7 +91,7 @@ export default function Contact() {
                 />
                 <ContactMethod 
                   icon="✉️" 
-                  title="Digital Correspondence"
+                  title="eMail"
                   content={<a href="mailto:info@chamberlainsinternational.com" className="hover:text-secondary transition-colors">info@chamberlainsinternational.com</a>}
                 />
                 <ContactMethod 
@@ -225,6 +226,7 @@ function ContactMethod({ icon, title, content }: { icon: string; title: string; 
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function FormInput({ label, id, ...props }: { label: string; id: string; [key: string]: any }) {
   return (
     <div className="flex flex-col gap-2">

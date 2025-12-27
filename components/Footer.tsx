@@ -32,11 +32,13 @@ export default function Footer() {
               Delivering bespoke real estate experiences and professional property management 
               with an international perspective since 2003.
             </p>
+            {/* Social Links 
             <div className="flex gap-4">
               <SocialLink href="#" label="Facebook" />
               <SocialLink href="#" label="Instagram" />
               <SocialLink href="#" label="LinkedIn" />
             </div>
+            */}
           </div>
 
           {/* Quick Links */}

@@ -71,7 +71,7 @@ export default function SellProperty() {
                 Designed to Achieve <br />Maximum Value
               </h3>
               <p className="text-lg text-muted mb-10 leading-relaxed">
-                Selling a property in today's market requires more than just a listing. 
+                Selling a property in today&apos;s market requires more than just a listing. 
                 It requires a comprehensive strategy that combines traditional expertise 
                 with modern digital reach.
               </p>

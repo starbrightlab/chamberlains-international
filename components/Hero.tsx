@@ -23,15 +23,16 @@ export default function Hero() {
       {/* Content */}
       <div className="container-custom relative z-10">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8 animate-fade-in-up shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-            International Expertise • Local Excellence
-          </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.1] animate-fade-in-up animation-delay-200 drop-shadow-2xl">
             Elevating Your <br />
             <span className="text-secondary drop-shadow-none">Florida</span> Experience
           </h1>
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8 animate-fade-in-up shadow-lg">
+            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            International Expertise • Local Excellence
+          </div>
           
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-400 drop-shadow-lg">
             Boutique real estate services and premium property management 
@@ -47,7 +48,7 @@ export default function Hero() {
             </Link>
             <Link 
               href="/property-management"
-              className="bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-10 py-3.5 rounded-lg font-semibold transition-all duration-300 shadow-xl active:scale-[0.98] hover:scale-105"
+              className="bg-white backdrop-blur-md border-2 border-white text-primary hover:bg-white hover:text-primary text-lg px-10 py-3.5 rounded-lg font-semibold transition-all duration-300 shadow-xl active:scale-[0.98] hover:scale-105"
             >
               Management Services
             </Link>

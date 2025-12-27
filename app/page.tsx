@@ -25,7 +25,7 @@ export default function Home() {
               </h3>
               <p className="text-lg text-muted mb-10 leading-relaxed max-w-xl">
                 With over four decades of collective experience, we bridge the gap between 
-                global investment standards and Central Florida's unique real estate landscape.
+                global investment standards and Central Florida&apos;s unique real estate landscape.
               </p>
               
               <div className="grid gap-6">
@@ -48,7 +48,7 @@ export default function Home() {
               {/* Stats Cards */}
               <div className="space-y-6 mt-12">
                 <StatCard number="40+" label="Years Experience" color="secondary" />
-                <StatCard number="100s" label="Properties Managed" color="primary" />
+                <StatCard number="100+" label="Properties Managed" color="primary" />
               </div>
               <div className="space-y-6">
                 <StatCard number="3" label="Key Service Areas" color="accent" />
@@ -69,7 +69,7 @@ export default function Home() {
             <h2 className="text-secondary font-sans font-bold uppercase tracking-widest text-sm mb-4">Prime Locations</h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">Service Communities</h3>
             <p className="text-lg text-muted">
-              We specialize in Central Florida's most prestigious and high-growth resort communities.
+              We specialize in Central Florida&apos;s most prestigious and high-growth resort communities.
             </p>
           </div>
           
