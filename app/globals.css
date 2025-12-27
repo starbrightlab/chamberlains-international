@@ -5,41 +5,58 @@
   --background: #ffffff;
   --foreground: #0f172a;
   
-  /* Brand Colors - Extracted from logos */
-  --navy-primary: #1e3a5f;      /* Logo navy */
-  --navy-dark: #0f1f3d;         /* Deeper navy */
-  --blue-accent: #3b82f6;       /* Bright blue */
-  --gold-accent: #d4a574;       /* Palm gold from Preserve logo */
-  --green-accent: #10b981;      /* Fresh, natural */
+  /* Core Brand Colors - Based on Logo Analysis */
+  /* PRIMARY: White/Light - Let blue logos shine */
+  --cream-light: #fdfbf7;
+  --warm-white: #f8f6f2;
+  --soft-gray: #e8e6e1;
+  
+  /* ACCENT 1: Gold from Preserve palm */
+  --gold-primary: #c9a961;
+  --gold-dark: #a88a4d;
+  --gold-light: #e8d5a8;
+  
+  /* ACCENT 2: Deep green (nature, property) */
+  --green-primary: #4a7c59;
+  --green-dark: #3a6347;
+  
+  /* ACCENT 3: Navy for text (from logos) */
+  --navy-text: #1e3a5f;
+  --navy-dark: #0f1f3d;
   
   /* Neutrals */
   --slate: #64748b;
   --slate-light: #f1f5f9;
-  --slate-dark: #334155;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  /* Brand Colors */
-  --color-navy-primary: var(--navy-primary);
-  --color-navy-dark: var(--navy-dark);
-  --color-blue-accent: var(--blue-accent);
-  --color-gold-accent: var(--gold-accent);
-  --color-green-accent: var(--green-accent);
+  /* Light backgrounds - where logos live */
+  --color-cream-light: var(--cream-light);
+  --color-warm-white: var(--warm-white);
+  --color-soft-gray: var(--soft-gray);
   
-  /* Neutrals */
+  /* Gold accents - premium, warm */
+  --color-gold-primary: var(--gold-primary);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-light: var(--gold-light);
+  
+  /* Green accents - natural, property */
+  --color-green-primary: var(--green-primary);
+  --color-green-dark: var(--green-dark);
+  
+  /* Text colors */
+  --color-navy-text: var(--navy-text);
+  --color-navy-dark: var(--navy-dark);
   --color-slate: var(--slate);
   --color-slate-light: var(--slate-light);
-  --color-slate-dark: var(--slate-dark);
   
-  /* Legacy color names for compatibility */
-  --color-chamberlains-navy: var(--navy-primary);
-  --color-chamberlains-blue: var(--blue-accent);
-  --color-preserve-green: var(--green-accent);
-  --color-preserve-gold: var(--gold-accent);
-  --color-warm-accent: var(--gold-accent);
+  /* Legacy compatibility */
+  --color-chamberlains-navy: var(--navy-text);
+  --color-preserve-green: var(--green-primary);
+  --color-preserve-gold: var(--gold-primary);
   --color-slate-gray: var(--slate);
   --color-light-gray: var(--slate-light);
   --color-dark-gray: var(--navy-dark);
