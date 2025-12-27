@@ -2,8 +2,47 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Contact() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    const form = e.currentTarget;
+    const formDataObj = new FormData(form);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formDataObj as any).toString()
+      });
+
+      if (response.ok) {
+        router.push('/contact/success');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try calling us directly at (407) 569-7595');
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main>
       <Header />
@@ -71,12 +110,18 @@ export default function Contact() {
               <div className="bg-light-gray p-8 rounded-lg">
                 <h3 className="text-2xl font-semibold text-chamberlains-navy mb-6">Send Us A Message</h3>
                 
+                {error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-4">
+                    {error}
+                  </div>
+                )}
+
                 <form 
                   name="contact" 
-                  method="POST" 
-                  action="/contact/success"
+                  method="POST"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
                   className="space-y-4"
                 >
                   {/* Hidden fields for Netlify */}
@@ -99,6 +144,8 @@ export default function Contact() {
                       id="name"
                       name="name"
                       required
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     />
                   </div>
@@ -112,6 +159,8 @@ export default function Contact() {
                       id="email"
                       name="email"
                       required
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     />
                   </div>
@@ -124,6 +173,8 @@ export default function Contact() {
                       type="tel"
                       id="phone"
                       name="phone"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     />
                   </div>
@@ -136,6 +187,8 @@ export default function Contact() {
                       id="subject"
                       name="subject"
                       required
+                      value={formData.subject}
+                      onChange={(e) => setFormData({...formData, subject: e.target.value})}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     >
                       <option value="">Select a subject...</option>
@@ -156,15 +209,22 @@ export default function Contact() {
                       name="message"
                       required
                       rows={6}
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-chamberlains-blue focus:border-transparent"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-chamberlains-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+                    disabled={isSubmitting}
+                    className={`w-full px-8 py-3 rounded-lg font-semibold transition-colors ${
+                      isSubmitting 
+                        ? 'bg-gray-400 cursor-not-allowed text-white'
+                        : 'bg-chamberlains-blue hover:bg-blue-600 text-white'
+                    }`}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
 
