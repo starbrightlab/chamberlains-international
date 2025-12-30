@@ -44,7 +44,7 @@ export default function SearchPage() {
             <div className="p-6 md:p-10 border-b border-border bg-white">
               <h2 className="text-3xl font-display font-bold text-primary mb-4">MLS Property Finder</h2>
               <p className="text-muted leading-relaxed">
-                Use the tool below to filter properties by location, price, type, and more. All listings are updated in real-time directly from the Stellar MLS.
+                Use the tool below to filter properties by location, price, type, and more.
               </p>
             </div>
             
@@ -57,12 +57,6 @@ export default function SearchPage() {
               />
             </div>
           </div>
-          
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted">
-              Property data provided by Stellar MLS. Listings are updated frequently.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -72,7 +66,7 @@ export default function SearchPage() {
           <div className="grid md:grid-cols-3 gap-12">
             <SearchFeature 
               title="Real-Time Data" 
-              description="Direct connection to the Stellar MLS ensures you see listings the moment they hit the market."
+              description="Direct connection to live listings ensures you see new properties the moment they hit the market."
             />
             <SearchFeature 
               title="Global Perspective" 
