@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Property Search | Chamberlains Real Estate',
-  description: 'Search for properties on the market in Florida using our interactive MLS search tool.',
+  description: 'Search for properties on the market in Florida using our interactive search tool.',
 };
 
 export default function SearchPage() {
@@ -32,7 +32,7 @@ export default function SearchPage() {
             Property <span className="text-secondary">Search</span>
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Explore the latest listings in the Florida market with our real-time MLS integration.
+            Explore the latest listings in the Florida market with our real-time integration.
           </p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function SearchPage() {
         <div className="container-custom">
           <div className="bg-surface rounded-2xl shadow-luxury border border-border overflow-hidden">
             <div className="p-6 md:p-10 border-b border-border bg-white">
-              <h2 className="text-3xl font-display font-bold text-primary mb-4">MLS Property Finder</h2>
+              <h2 className="text-3xl font-display font-bold text-primary mb-4">Property Finder</h2>
               <p className="text-muted leading-relaxed">
                 Use the tool below to filter properties by location, price, type, and more.
               </p>
