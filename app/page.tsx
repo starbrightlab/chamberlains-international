@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -74,18 +75,24 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <AreaCard 
-              title="Champions Gate" 
-              description="World-class golf resorts and luxury vacation residences near the heart of the action."
-            />
-            <AreaCard 
-              title="Davenport" 
-              description="High-yield investment opportunities and family-oriented communities with excellent amenities."
-            />
-            <AreaCard 
-              title="Kissimmee" 
-              description="Established markets offering diverse residential and short-term rental possibilities."
-            />
+            <Link href="/search" className="block h-full">
+              <AreaCard 
+                title="Champions Gate" 
+                description="World-class golf resorts and luxury vacation residences near the heart of the action."
+              />
+            </Link>
+            <Link href="/search" className="block h-full">
+              <AreaCard 
+                title="Davenport" 
+                description="High-yield investment opportunities and family-oriented communities with excellent amenities."
+              />
+            </Link>
+            <Link href="/search" className="block h-full">
+              <AreaCard 
+                title="Kissimmee" 
+                description="Established markets offering diverse residential and short-term rental possibilities."
+              />
+            </Link>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -71,16 +72,23 @@ export default function BuyProperty() {
             <div className="bg-surface rounded-2xl shadow-luxury border border-border p-10 lg:p-16">
               <h4 className="text-2xl font-display font-bold text-primary mb-8">Comprehensive Services</h4>
               <ul className="space-y-6">
-                <BuyingServiceItem text="MLS access and potential off-market searches" />
+                <li className="flex items-center gap-4 text-muted border-b border-border pb-4 last:border-0 last:pb-0">
+                  <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
+                  <span className="text-[17px]">
+                    Interactive <Link href="/search" className="text-primary font-bold hover:text-secondary underline decoration-secondary/30 transition-colors">MLS search</Link> and off-market opportunities
+                  </span>
+                </li>
                 <BuyingServiceItem text="In-depth market and property analysis" />
                 <BuyingServiceItem text="Professional offer preparation and negotiation" />
                 <BuyingServiceItem text="Coordination of inspections and due diligence" />
                 <BuyingServiceItem text="Post-purchase management integration" />
               </ul>
               
-              <div className="mt-12 pt-10 border-t border-border">
-                 <p className="font-bold text-primary uppercase tracking-widest text-sm mb-6">Need Immediate Assistance?</p>
-                 <a href="tel:+14075697595" className="btn-primary w-full text-center inline-block">
+              <div className="mt-12 pt-10 border-t border-border flex flex-col gap-4">
+                 <Link href="/search" className="btn-secondary w-full text-center inline-block">
+                   Search Live Listings
+                 </Link>
+                 <a href="tel:+14075697595" className="btn-outline w-full text-center inline-block">
                    Call (407) 569-7595
                  </a>
               </div>

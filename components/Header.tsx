@@ -47,6 +47,7 @@ export default function Header() {
             <div className="flex items-center gap-8">
               <NavLink href="/" scrolled={scrolled}>Home</NavLink>
               <NavLink href="/buy" scrolled={scrolled}>Buy</NavLink>
+              <NavLink href="/search" scrolled={scrolled}>Search</NavLink>
               <NavLink href="/sell" scrolled={scrolled}>Sell</NavLink>
               <NavLink href="/property-management" scrolled={scrolled}>Management</NavLink>
               <NavLink href="/about" scrolled={scrolled}>About</NavLink>
@@ -85,6 +86,7 @@ export default function Header() {
           <div className="flex flex-col p-6 gap-4">
             <MobileNavLink href="/" onClick={() => setMobileMenuOpen(false)}>Home</MobileNavLink>
             <MobileNavLink href="/buy" onClick={() => setMobileMenuOpen(false)}>Buy</MobileNavLink>
+            <MobileNavLink href="/search" onClick={() => setMobileMenuOpen(false)}>Search Properties</MobileNavLink>
             <MobileNavLink href="/sell" onClick={() => setMobileMenuOpen(false)}>Sell</MobileNavLink>
             <MobileNavLink href="/property-management" onClick={() => setMobileMenuOpen(false)}>Management</MobileNavLink>
             <MobileNavLink href="/about" onClick={() => setMobileMenuOpen(false)}>About</MobileNavLink>

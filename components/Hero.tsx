@@ -41,10 +41,10 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-5 animate-fade-in-up animation-delay-600">
             <Link 
-              href="/buy"
+              href="/search"
               className="btn-secondary text-lg px-10 shadow-xl hover:scale-105 transition-transform"
             >
-              Explore Properties
+              Search Properties
             </Link>
             <Link 
               href="/property-management"

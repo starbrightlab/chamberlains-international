@@ -45,6 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-display font-bold mb-8 text-secondary">Expertise</h4>
             <ul className="space-y-4">
+              <FooterLink href="/search">Property Search</FooterLink>
               <FooterLink href="/buy">Buying Property</FooterLink>
               <FooterLink href="/sell">Selling Property</FooterLink>
               <FooterLink href="/property-management">Property Management</FooterLink>

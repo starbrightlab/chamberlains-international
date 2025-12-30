@@ -22,7 +22,7 @@ export default function ContactSuccess() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <div className="absolute inset-0 bg-accent/20 rounded-full blur-2xl -z-0 scale-150 opacity-50" />
+            <div className="absolute inset-0 bg-accent/20 rounded-full blur-2xl z-0 scale-150 opacity-50" />
           </div>
 
           <h1 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
@@ -30,7 +30,7 @@ export default function ContactSuccess() {
           </h1>
           
           <p className="text-xl text-muted mb-12 leading-relaxed">
-            Thank you for reaching out to Chamberlains & Preserve. 
+            Thank you for reaching out to Chamberlains Real Estate International & Preserve Property Management. 
             A specialist will review your request and contact you within 24 hours.
           </p>
 
@@ -44,6 +44,15 @@ export default function ContactSuccess() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
+            <Link 
+              href="/search"
+              className="btn-secondary flex items-center justify-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              Search Properties
+            </Link>
             <a 
               href="tel:+14075697595"
               className="btn-primary flex items-center justify-center gap-2"
@@ -65,6 +74,7 @@ export default function ContactSuccess() {
           <div className="mt-20 pt-10 border-t border-border">
             <p className="text-xs font-bold uppercase tracking-widest text-muted mb-6">Explore Our Services</p>
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
+              <FooterLink href="/search">Property Search</FooterLink>
               <FooterLink href="/buy">Buying</FooterLink>
               <FooterLink href="/sell">Selling</FooterLink>
               <FooterLink href="/property-management">Management</FooterLink>
